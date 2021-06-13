@@ -1,10 +1,10 @@
-package edu.poly.TuAnhpolyshop;
+package edu.poly.ThienPCpolyshop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TuAnhPolyshopApplicationTests {
+class ThienPCPolyshopApplicationTests {
 
 	@Test
 	void contextLoads() {

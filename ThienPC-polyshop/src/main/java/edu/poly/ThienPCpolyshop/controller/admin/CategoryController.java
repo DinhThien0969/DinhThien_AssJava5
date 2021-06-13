@@ -29,7 +29,6 @@ import org.springframework.web.servlet.ModelAndView;
 import edu.poly.ThienPCpolyshop.domain.Category;
 import edu.poly.ThienPCpolyshop.model.CategoryDto;
 import edu.poly.ThienPCpolyshop.service.CategoryService;
-import edu.poly.ThienPCpolyshop.utils.Const;
 
 @Controller
 @RequestMapping("admin/categories")
@@ -74,7 +73,7 @@ public class CategoryController {
 
 		categoryservice.deleteById(categoryId);
 		
-		model.addAttribute("message", "Đã xóa thành công bạn nhé");
+		model.addAttribute("message", "Xóa thành công");
 		return new ModelAndView("forward:/admin/categories/search",model);
 	}
 
@@ -127,7 +126,7 @@ public class CategoryController {
 	@GetMapping("searchpaginated")
 	public String search( ModelMap model ,@RequestParam (name="name", required = false) String name ,
 			@RequestParam("page") Optional<Integer> page,//trang hiện tại
-			@RequestParam("age") Optional<Integer> size) {//size là kích thước hiển thị trên 1 trang
+			@RequestParam("size") Optional<Integer> size) {//size là kích thước hiển thị trên 1 trang
 
 		int curentPage=page.orElse(1);//nếu người dùng không chọn giá trị thì giá trị ngầm định sẽ là trang 1
 		
@@ -166,7 +165,7 @@ public class CategoryController {
 			model.addAttribute("pageNumbers",pageNumbers);
 		}
 		
-		model.addAttribute(Const.CATEGORY_PAGE,resultPage);//thiết lập danh sách cho thuộc tính categories
+		model.addAttribute("categoryPage",resultPage);//thiết lập danh sách cho thuộc tính categories
 		
 		return "admin/categories/searchpaginated";//trả về searchpaginated
 	}
