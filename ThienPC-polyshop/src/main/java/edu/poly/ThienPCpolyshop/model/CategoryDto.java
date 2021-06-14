@@ -21,4 +21,5 @@ public class CategoryDto implements Serializable{
 	private String name;
 	
 	private Boolean isEdit = false; 
+	
 }
