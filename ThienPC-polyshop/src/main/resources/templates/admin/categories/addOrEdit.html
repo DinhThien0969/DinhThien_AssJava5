@@ -27,13 +27,13 @@
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" th:field="*{name}" id="name"
                                     aria-describedby="helpId" placeholder="Category Name">
-                                <small th:if="${#fields.hasErrors('name')}" id="nameHId" class="form-text text-muted">BÃ¡ÂºÂ¯t buÃ¡Â»Â™c nhÃ¡ÂºÂ­p trÃƒÂªn 5 kÃƒÂ½ tÃ¡Â»Â±</small>
+                                <small th:if="${#fields.hasErrors('name')}" id="nameHId" class="form-text text-muted">Mời bạn nhập name</small>
                             </div>
                         </div>
                         <div class="card-footer text-muted">
 
                             <button class="btn btn-secondary "type="reset">Reset</button>
-                            <a th:href="@{/admin/categories}" class="btn btn-success">Danh sÃƒÂ¡ch sÃ¡ÂºÂ£n phÃ¡ÂºÂ©m</a>
+                            <a th:href="@{/admin/categories}" class="btn btn-success">Hiển thị danh sách</a>
                             <button class="btn btn-primary"><i class="fas fa-save"></i>
                                Save
                             </button>

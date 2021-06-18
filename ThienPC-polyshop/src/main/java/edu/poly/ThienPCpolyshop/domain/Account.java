@@ -20,6 +20,6 @@ public class Account implements Serializable{
 @Id
 @Column(length = 30)
 	private String username;
-@Column(length = 20,nullable = false)
+@Column(length = 60,nullable = false)
 	private String password;
 }

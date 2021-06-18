@@ -27,7 +27,7 @@
 			<div class="col mt-4 ">
 				<div class="card">
 					<div class="card-header">
-						<h2>Danh sách Product</h2>
+						<h2>Danh sÃ¡ch cÃ¡c loáº¡i sáº£n pháº©m</h2>
 					</div>
 					<div class="card-body">
 						<div th:if="${message !=null}" class="alert alert-primary"
@@ -36,7 +36,7 @@
 						</div>
 						<div class="row mt-2 mb-2">
 							<div class="col">
-								<form th:action="@{/admin/categories/search}">
+								<form th:action="@{/admin/accounts/search}">
 									<div class="form-inline float-left">
 										<label for="name">Name:</label> <input type="text"
 											class="form-control ml-2" name="name" id="name"
@@ -46,29 +46,26 @@
 								</form>
 								<div class="float-right">
 									<a class="btn btn-outline-primary"
-										th:href="@{/admin/categories/add}">Thêm mới sản phẩm</a>
+										th:href="@{/admin/accounts/add}">ThÃªm má»i sáº£n pháº©m</a>
 								</div>
 							</div>
 						</div>
 						<table class="table table-striped table-inverse ">
 							<thead class="thead-inverse">
 								<tr>
-									<th>Category ID</th>
-									<th>Name</th>
+									<th>Username</th>
+									<th>Password</th>
 									<th></th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr th:each="category :${categories}">
-									<td scope="row">[[${category.categoryId}]]</td>
-									<td th:text="${category.name}"></td>
-									<td class="float-right"><a
-										th:href="@{'/admin/categories/view' + ${category.categoryId}}"
-										class="btn btn-outline-info"><i class="fas fa-info mr-2"></i>Chi tiết</a> <a
-										th:href="@{'/admin/categories/edit/' + ${category.categoryId}}"
-										class="btn btn-outline-warning"><i
-											class="fas fa-edit mr-2"></i>Chỉnh sửa</a> 
-<a th:href="@{'/admin/categories/delete/' + ${category.categoryId}}" class="btn btn-outline-danger"onclick="return confirm('Bạn có muốn xóa sản phẩm');">Xóa</a>
+								<tr th:each="account :${accounts}">
+									<td scope="row">[[${account.username}]]</td>
+									<td th:text="${account.password}"></td>
+									<td class="float-right">
+										<a th:href="@{'/admin/accounts/view' + ${account.categoryId}}" class="btn btn-outline-info"><i class="fas fa-info mr-2"></i>Chi tiáº¿t</a> 
+										<a th:href="@{'/admin/accounts/edit/' + ${account.categoryId}}" class="btn btn-outline-warning"><i class="fas fa-edit mr-2"></i>Chá»nh sá»­a</a> 
+										<a th:href="@{'/admin/accounts/delete/' + ${account.categoryId}}" class="btn btn-outline-danger"onclick="return confirm('bÃ¡ÂºÂ¡n thÃ¡Â»Â±c sÃ¡Â»Â± muÃ¡Â»Ân xÃÂ³a chÃ¡Â»Â©');">XÃ³a</a>
 									</td>
 								</tr>
 							</tbody>
