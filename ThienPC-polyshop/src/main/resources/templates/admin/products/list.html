@@ -53,11 +53,11 @@
 								  <td><input type="checkbox" class="form-check-inline"></td>
 								  <td><img src="images/asus.jpg" width="70" class="img-fluid" alt=""></td>                            
 								  <td th:text="${item.name}"></td>
-								  <td th:text="${item.quantity}">500</td>
-								  <td th:text="${item.unitPrice}">50.4</td>
-								  <td th:text="${item.discount}">5%</td>
-								  <td th:text="${item.status}">BestSeller</td>
-								  <td th:text="${item.category.name}">Clothes</td>
+								  <td th:text="${item.quantity}"></td>
+								  <td th:text="${item.unitPrice}"></td>
+								  <td th:text="${item.discount}"></td>
+								  <td th:text="${item.status}"></td>
+								  <td th:text="${item.category.name}"></td>
 								  <td>
 									<a th:href="@{'/admin/products/view/' + ${item.productId}}" class="btn btn-outline-info"><i class="fas fa-info"></i>Chi tiết</a>
 									<a th:href="@{'/admin/products/edit/' + ${item.productId}}" class="btn btn-outline-warning"><i class="fas fa-edit"></i>Chỉnh sửa</a>
